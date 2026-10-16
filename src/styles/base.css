@@ -1,0 +1,9 @@
+/* ==========================================================
+   Base · estilos generales de la página
+   ========================================================== */
+
+body {
+  margin: 0;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+}

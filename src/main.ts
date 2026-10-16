@@ -1,3 +1,6 @@
 // Punto de entrada del proyecto.
-// Acá vamos a ir importando los estilos y los scripts a medida que los necesitemos.
+// Estilos: el orden importa. Primero los tokens, después lo que los usa.
+import "./styles/tokens.css";
+import "./styles/base.css";
+
 console.log("La landing está funcionando");
