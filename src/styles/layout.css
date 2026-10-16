@@ -1,0 +1,39 @@
+/* ==========================================================
+   Layout · estructura de las secciones
+   ========================================================== */
+
+/* Cada sección es un auto layout vertical */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--section-space) var(--page-gutter);
+  background: var(--color-bg-page);
+}
+
+/* Fondos alternados, como en Figma */
+.section--subtle,
+.section--hero {
+  background: var(--color-bg-subtle);
+}
+
+/* Contacto: fondo oscuro y textos claros */
+.section--contact {
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+}
+.section--contact .overline,
+.section--contact .lead {
+  color: var(--color-text-inverse-secondary);
+}
+
+/* En el hero, más aire entre bloques */
+.section--hero {
+  gap: var(--spacing-lg);
+}
+
+/* Títulos y bajadas no muy anchos, para que se lean bien */
+.section h2,
+.section .lead {
+  max-width: 720px;
+}

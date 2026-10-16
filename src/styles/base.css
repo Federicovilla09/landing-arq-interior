@@ -1,3 +1,10 @@
+/* Que el ancho incluya padding y borde, como en Figma */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* ==========================================================
    Base · estilos generales de la página
    ========================================================== */

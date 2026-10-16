@@ -60,4 +60,34 @@
     /* --- Tipografía --- */
     --font-display: "Alexandria", system-ui, sans-serif;
     --font-body: "Manrope", system-ui, sans-serif;
+
+    /* --- Layout --- */
+    --page-gutter: var(--spacing-md);
+
+    /* margen lateral: 16 en mobile */
+    --section-space: var(--spacing-2xl);
+    /* espacio arriba y abajo de cada sección: 48 */
+}
+
+/* Tablet: desde 600 px */
+@media (min-width: 600px) {
+  :root {
+    --page-gutter: var(--spacing-xl);      /* 32 */
+    --section-space: var(--spacing-4xl);   /* 80 */
+  }
+}
+
+/* Desktop compacto: desde 1024 px */
+@media (min-width: 1024px) {
+  :root {
+    --page-gutter: var(--spacing-2xl);     /* 48 */
+  }
+}
+
+/* Desktop: desde 1280 px */
+@media (min-width: 1280px) {
+  :root {
+    --page-gutter: var(--spacing-4xl);     /* 80 */
+    --section-space: var(--spacing-5xl);   /* 120 */
+  }
 }
