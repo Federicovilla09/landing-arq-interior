@@ -63,6 +63,7 @@
 
     /* --- Layout --- */
     --page-gutter: var(--spacing-md);
+    --header-h: 64px;   /* alto del header en mobile */
 
     /* margen lateral: 16 en mobile */
     --section-space: var(--spacing-2xl);
@@ -81,6 +82,7 @@
 @media (min-width: 1024px) {
   :root {
     --page-gutter: var(--spacing-2xl);     /* 48 */
+    --header-h: 72px;   /* alto del header en desktop */
   }
 }
 

@@ -37,3 +37,71 @@
 .section .lead {
   max-width: 720px;
 }
+
+/* ==========================================================
+   Header fijo
+   ========================================================== */
+
+.site-header {
+  position: fixed;          /* queda clavado arriba al hacer scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;              /* por encima de las secciones */
+  height: var(--header-h);
+
+  display: flex;            /* auto layout horizontal */
+  align-items: center;      /* centrado vertical */
+  justify-content: space-between;  /* marca a la izquierda, acciones a la derecha */
+  gap: var(--spacing-lg);
+  padding: 0 var(--page-gutter);
+
+  background: var(--color-bg-page);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+/* Las anclas, en fila y sin viñetas */
+.site-header__links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+}
+
+/* Mobile: sin anclas y con el texto corto del CTA */
+.site-header__nav,
+.site-header__cta-long {
+  display: none;
+}
+
+/* Desde 1024: aparecen las anclas y se oculta el botón de menú */
+@media (min-width: 1024px) {
+  .site-header__nav {
+    display: block;
+  }
+  [data-menu-open] {
+    display: none;
+  }
+}
+
+/* Desde 1280: más aire entre anclas y el CTA completo */
+@media (min-width: 1280px) {
+  .site-header__links {
+    gap: var(--spacing-lg);
+  }
+  .site-header__cta-long {
+    display: inline;
+  }
+}
+
+/* El contenido empieza debajo del header */
+main {
+  padding-top: var(--header-h);
+}

@@ -1,3 +1,8 @@
+/* Al ir a un ancla, dejar lugar para el header fijo */
+html {
+  scroll-padding-top: var(--header-h);
+}   
+
 /* Que el ancho incluya padding y borde, como en Figma */
 *,
 *::before,
@@ -102,4 +107,21 @@ h3 {
 @media (min-width: 1280px) {
   h1 { font-size: 64px; line-height: 1.05; }
   h2 { font-size: 44px; line-height: 1.1; }
+}
+
+/* "Saltar al contenido": oculto hasta que se lo alcanza con Tab */
+.skip-link {
+  position: fixed;
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
+  z-index: 20;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
