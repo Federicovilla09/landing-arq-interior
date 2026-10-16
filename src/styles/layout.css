@@ -105,3 +105,86 @@
 main {
   padding-top: var(--header-h);
 }
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--page-gutter);
+  background: var(--color-bg-inverse-strong);
+  color: var(--color-text-inverse);
+}
+
+/* Identidad y contacto: apilados en mobile */
+.site-footer__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.site-footer__identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 440px;
+}
+
+.site-footer__identity p:not(.site-footer__brand) {
+  color: var(--color-text-inverse-secondary);
+}
+
+/* Contacto */
+.site-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+  font-style: normal;     /* <address> viene en cursiva por defecto */
+}
+
+.site-footer__contact .overline {
+  color: var(--color-text-inverse-secondary);
+}
+
+.site-footer__contact ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Cada dato: ícono + texto alineados */
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+  color: var(--color-text-inverse);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+/* La nota final, separada por una línea */
+.site-footer__note {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-inverse);
+  color: var(--color-text-inverse-secondary);
+}
+
+/* Desde 600: identidad y contacto en fila */
+@media (min-width: 600px) {
+  .site-footer__blocks {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desde 1024: más aire arriba y abajo */
+@media (min-width: 1024px) {
+  .site-footer {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+}
