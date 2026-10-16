@@ -15,3 +15,84 @@ h1,
 h2 {
   font-family: var(--font-display);
 }
+
+/* ==========================================================
+   Estilos de texto (tablero 02 · Tipografía del handoff)
+   ========================================================== */
+
+/* En Figma los textos no tienen márgenes: los espacios los da el auto layout.
+   Acá hacemos lo mismo y quitamos los márgenes que agrega el navegador. */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Heading/H1 · Alexandria Light */
+h1 {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+}
+
+/* Heading/H2 · Alexandria Regular */
+h2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+/* Heading/H3 · Manrope SemiBold */
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* Body/Large: la bajada de cada sección */
+.lead {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+/* Label/Overline: el sobretítulo */
+.overline {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+/* Label/Brand: el nombre en header, menú y footer */
+.site-header__brand,
+.menu__brand,
+.site-footer__brand {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Label/Caption: la nota del footer */
+.site-footer__note {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* --- Tablet: desde 600 px --- */
+@media (min-width: 600px) {
+  h1 { font-size: 48px; line-height: 1.08; letter-spacing: -0.01em; }
+  h2 { font-size: 36px; line-height: 1.12; letter-spacing: -0.005em; }
+  .lead { font-size: 18px; }
+}
+
+/* --- Desktop: desde 1280 px --- */
+@media (min-width: 1280px) {
+  h1 { font-size: 64px; line-height: 1.05; }
+  h2 { font-size: 44px; line-height: 1.1; }
+}
