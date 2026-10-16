@@ -1,72 +1,105 @@
 <!doctype html>
 <html lang="es-AR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>[Nombre] · Arquitecta — Espacios pensados para tu día a día</title>
-    <meta
-      name="description"
-      content="Diseño espacios a partir de cómo vivís y qué necesitás. Conocé cómo trabajo y consultá por tu proyecto."
-    />
-  </head>
 
-  <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Nombre] · Arquitecta — Espacios pensados para tu día a día</title>
+  <meta name="description"
+    content="Diseño espacios a partir de cómo vivís y qué necesitás. Conocé cómo trabajo y consultá por tu proyecto." />
+</head>
 
-    <header class="site-header">
-      <!-- Marca: vuelve al inicio -->
-      <a class="site-header__brand" href="#inicio">[Nombre] · Arquitecta</a>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-      <!-- Anclas a las secciones -->
-      <nav class="site-header__nav" aria-label="Principal" data-nav>
-        <ul class="site-header__links">
-          <li><a class="nav-item" href="#servicios">Servicios</a></li>
-          <li><a class="nav-item" href="#proyectos">Proyectos</a></li>
-          <li><a class="nav-item" href="#sobre-mi">Sobre mí</a></li>
-          <li><a class="nav-item" href="#como-trabajo">Cómo trabajo</a></li>
-        </ul>
-      </nav>
+  <header class="site-header">
+    <!-- Marca: vuelve al inicio -->
+    <a class="site-header__brand" href="#inicio">[Nombre] · Arquitecta</a>
 
-      <!-- Acciones -->
-      <div class="site-header__actions">
-        <a class="button button--primary" href="#contacto" data-header-cta>
-          Consultar<span class="site-header__cta-long"> por mi espacio</span>
-        </a>
+    <!-- Anclas a las secciones -->
+    <nav class="site-header__nav" aria-label="Principal" data-nav>
+      <ul class="site-header__links">
+        <li><a class="nav-item" href="#servicios">Servicios</a></li>
+        <li><a class="nav-item" href="#proyectos">Proyectos</a></li>
+        <li><a class="nav-item" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav-item" href="#como-trabajo">Cómo trabajo</a></li>
+      </ul>
+    </nav>
 
-        <button
-          class="icon-button"
-          type="button"
-          aria-label="Abrir menú"
-          aria-controls="menu"
-          aria-expanded="false"
-          data-menu-open
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M4 7h16M4 12h16M4 17h16"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
+    <!-- Acciones -->
+    <div class="site-header__actions">
+      <a class="button button--primary" href="#contacto" data-header-cta>
+        Consultar<span class="site-header__cta-long"> por mi espacio</span>
+      </a>
+
+      <button class="icon-button" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"
+        data-menu-open>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- 01 · Hero -->
+    <section id="inicio" class="section section--hero" aria-labelledby="inicio-titulo" data-panel>
+      <p class="overline">Arquitecta</p>
+      <h1 id="inicio-titulo">Tu casa debería hacerte la vida más fácil</h1>
+      <p class="lead">
+        Diseño espacios a partir de cómo vivís, qué necesitás y cómo querés sentirte en tu día a día.
+      </p>
+      <div class="section__actions">
+        <a class="button button--primary" href="#contacto" data-hero-cta>Consultar por mi espacio</a>
+        <a class="button button--secondary" href="#proyectos">Ver proyectos</a>
       </div>
-    </header>
+    </section>
 
-    <main id="contenido">
-      <!-- Paso 1.4: las seis secciones -->
-    </main>
+    <!-- 02 · Qué puedo resolver -->
+    <section id="servicios" class="section" aria-labelledby="servicios-titulo" data-panel>
+      <p class="overline">01 · Qué puedo resolver</p>
+      <h2 id="servicios-titulo">¿Tu casa no funciona como necesitás?</h2>
+      <p class="lead">
+        Muchas veces el problema no es el estilo, sino cómo está pensado el espacio. Estas son algunas
+        situaciones en las que puedo ayudarte.
+      </p>
+    </section>
 
-    <footer class="site-footer">
-      <!-- Paso 1.5: datos de contacto -->
-    </footer>
+    <!-- 03 · Proyectos -->
+    <section id="proyectos" class="section" aria-labelledby="proyectos-titulo" data-panel="tall">
+      <p class="overline">02 · Proyectos</p>
+      <h2 id="proyectos-titulo">Cada proyecto parte de una necesidad</h2>
+      <p class="lead">Así se ve el diseño cuando empieza por cómo vive cada persona.</p>
+    </section>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <!-- 04 · Sobre mí -->
+    <section id="sobre-mi" class="section" aria-labelledby="sobre-mi-titulo" data-panel>
+      <p class="overline">03 · Sobre mí</p>
+      <h2 id="sobre-mi-titulo">Fan de resolver espacios</h2>
+    </section>
+
+    <!-- 05 · Cómo trabajo -->
+    <section id="como-trabajo" class="section" aria-labelledby="como-trabajo-titulo" data-panel>
+      <p class="overline">04 · Cómo trabajo</p>
+      <h2 id="como-trabajo-titulo">Qué pasa cuando me escribís</h2>
+      <p class="lead">Primero nos conocemos y ves una propuesta. Si decidís avanzar, seguimos.</p>
+    </section>
+
+    <!-- 06 · Contacto -->
+    <section id="contacto" class="section section--contact" aria-labelledby="contacto-titulo" data-panel>
+      <p class="overline">05 · Contacto</p>
+      <h2 id="contacto-titulo">¿Empezamos por tu espacio?</h2>
+      <p class="lead">
+        El primer paso es una conversación: contame qué necesitás y vemos cómo puedo ayudarte.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <!-- Paso 1.5: datos de contacto -->
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
