@@ -4,56 +4,60 @@
    ========================================================== */
 
 :root {
-  /* --- Primitivas: los colores "crudos" de la paleta --- */
-  --gray-0: #FFFFFF;
-  --linen-50: #F6F2EC;
-  --linen-100: #E8E1D6;
-  --sand-300: #CEB59E;
-  --terracotta-500: #A46448;
-  --terracotta-600: #8A5139;
-  --brown-600: #6E554A;
-  --brown-900: #4D362E;
-  --brown-950: #3B2A24;
+    /* --- Primitivas: los colores "crudos" de la paleta --- */
+    --gray-0: #FFFFFF;
+    --linen-50: #F6F2EC;
+    --linen-100: #E8E1D6;
+    --sand-300: #CEB59E;
+    --terracotta-500: #A46448;
+    --terracotta-600: #8A5139;
+    --brown-600: #6E554A;
+    --brown-900: #4D362E;
+    --brown-950: #3B2A24;
 
-  /* --- Color semántico: el ROL de cada color --- */
-  --color-bg-page: var(--linen-50);
-  --color-bg-subtle: var(--linen-100);
-  --color-bg-placeholder: var(--sand-300);
-  --color-bg-inverse: var(--brown-900);
-  --color-bg-inverse-strong: var(--brown-950);
+    /* --- Color semántico: el ROL de cada color --- */
+    --color-bg-page: var(--linen-50);
+    --color-bg-subtle: var(--linen-100);
+    --color-bg-placeholder: var(--sand-300);
+    --color-bg-inverse: var(--brown-900);
+    --color-bg-inverse-strong: var(--brown-950);
 
-  --color-text-primary: var(--brown-900);
-  --color-text-secondary: var(--brown-600);
-  --color-text-tertiary: var(--brown-600);
-  --color-text-inverse: var(--gray-0);
-  --color-text-inverse-secondary: var(--sand-300);
+    --color-text-primary: var(--brown-900);
+    --color-text-secondary: var(--brown-600);
+    --color-text-tertiary: var(--brown-600);
+    --color-text-inverse: var(--gray-0);
+    --color-text-inverse-secondary: var(--sand-300);
 
-  --color-border-default: var(--sand-300);
-  --color-border-strong: var(--brown-900);
-  --color-border-inverse: var(--brown-600);
-  --color-border-focus: var(--brown-900);
-  --color-border-focus-inverse: var(--linen-100);
+    --color-border-default: var(--sand-300);
+    --color-border-strong: var(--brown-900);
+    --color-border-inverse: var(--brown-600);
+    --color-border-focus: var(--brown-900);
+    --color-border-focus-inverse: var(--linen-100);
 
-  --color-action-primary: var(--terracotta-500);
-  --color-action-primary-hover: var(--terracotta-600);
-  --color-action-secondary-hover: var(--sand-300);
-  --color-action-inverse: var(--linen-100);
-  --color-action-inverse-hover: var(--sand-300);
+    --color-action-primary: var(--terracotta-500);
+    --color-action-primary-hover: var(--terracotta-600);
+    --color-action-secondary-hover: var(--sand-300);
+    --color-action-inverse: var(--linen-100);
+    --color-action-inverse-hover: var(--sand-300);
 
-  /* --- Spacing --- */
-  --spacing-2xs: 4px;
-  --spacing-xs: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
-  --spacing-4xl: 80px;
-  --spacing-5xl: 120px;
+    /* --- Spacing --- */
+    --spacing-2xs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 80px;
+    --spacing-5xl: 120px;
 
-  /* --- Radius --- */
-  --radius-none: 0;
-  --radius-sm: 2px;
-  --radius-md: 4px;
+    /* --- Radius --- */
+    --radius-none: 0;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+
+    /* --- Tipografía --- */
+    --font-display: "Alexandria", system-ui, sans-serif;
+    --font-body: "Manrope", system-ui, sans-serif;
 }

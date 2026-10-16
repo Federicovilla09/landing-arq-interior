@@ -6,4 +6,12 @@ body {
   margin: 0;
   background: var(--color-bg-page);
   color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
 }
