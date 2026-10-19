@@ -76,3 +76,24 @@
     flex-basis: 640px;           /* Fixed width: 640 */
   }
 }
+
+/* ---------- Qué puedo resolver ---------- */
+.need-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Desktop: las tres en fila, del mismo alto */
+@media (min-width: 1024px) {
+  .need-list {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+  .card-need {
+    flex: 1;
+  }
+}
