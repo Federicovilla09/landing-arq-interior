@@ -125,3 +125,18 @@ h3 {
 .skip-link:focus {
   transform: none;
 }
+
+/* ==========================================================
+   Foco visible (Componentes · v1, estado Focus)
+   ========================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Sobre fondos oscuros, el foco en color claro */
+.section--contact :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--color-border-focus-inverse);
+}
