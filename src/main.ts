@@ -13,7 +13,9 @@ import "./styles/base.css";
 import { initHeaderCta } from "./scripts/header-cta";
 import { initScrollSpy } from "./scripts/scroll-spy";
 import { initMenu } from "./scripts/menu";
+import { initStacking } from "./scripts/stacking";
 
 initHeaderCta();
 initScrollSpy();
 initMenu();
+initStacking();

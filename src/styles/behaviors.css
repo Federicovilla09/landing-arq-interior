@@ -86,3 +86,30 @@ html:has(.menu[open]) {
 .menu > .button {
   margin: 0 var(--page-gutter);
 }
+
+/* ---------- Paneles apilados (stacking.ts) ----------
+   Solo en desktop con alto suficiente y sin preferencia de movimiento reducido.
+   Cada sección queda fija y la siguiente la cubre.
+   --panel-h (el alto de cada sección) lo mide stacking.ts. */
+@media (min-width: 1024px) and (min-height: 720px) and (prefers-reduced-motion: no-preference) {
+  [data-panel] {
+    position: sticky;
+    /* Si la sección entra en la pantalla: fija debajo del header.
+       Si es más alta: fija recién cuando se ve su final. */
+    top: min(var(--header-h), calc(100svh - var(--panel-h, 100svh)));
+  }
+
+  /* Señal de capa: cada sección que cubre a la anterior */
+  [data-panel] + [data-panel] {
+    box-shadow: 0 -12px 32px rgb(0 0 0 / 0.12);
+    border-top: 1px solid var(--color-border-default);
+  }
+}
+
+/* Por debajo de 1024: la capa se insinúa, sin movimiento */
+@media (max-width: 1023px) {
+  [data-panel] + [data-panel] {
+    box-shadow: 0 -4px 12px rgb(0 0 0 / 0.08);
+    border-top: 1px solid var(--color-border-default);
+  }
+}
