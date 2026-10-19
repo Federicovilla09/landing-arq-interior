@@ -7,9 +7,9 @@ import "@fontsource/manrope/600.css";    // SemiBold: botones, H3 y sobretítulo
 import "./styles/layout.css";
 import "./styles/components.css";
 import "./styles/sections.css";
-
-// Estilos: el orden importa. Primero los tokens, después lo que los usa.
+import "./styles/behaviors.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
+import { initHeaderCta } from "./scripts/header-cta";
 
-console.log("La landing está funcionando");
+initHeaderCta();

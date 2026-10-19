@@ -1,0 +1,22 @@
+/* ==========================================================
+   Comportamientos · el CSS que trabaja junto con los scripts
+   ========================================================== */
+
+/* ---------- CTA del header (header-cta.ts) ----------
+   Oculto hasta que el botón del hero sale de la pantalla. */
+[data-header-cta] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+[data-header-cta][data-visible] {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Fundido suave, solo si la persona no pidió reducir el movimiento */
+@media (prefers-reduced-motion: no-preference) {
+  [data-header-cta] {
+    transition: opacity var(--duration-fast) var(--ease-out);
+  }
+}
