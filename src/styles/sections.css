@@ -211,3 +211,79 @@
         height: 600px;
     }
 }
+
+/* ==========================================================
+   Sobre mí
+   ========================================================== */
+
+/* Como el hero: la imagen va a sangre, sin el padding general */
+.section--about {
+    padding: 0;
+    gap: 0;
+}
+
+.about__media {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 5;              /* 390 × 488 en Figma */
+}
+
+.about__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;      /* prioriza la parte de arriba: la cara */
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-2xl) var(--page-gutter) var(--section-space);
+}
+
+/* Label/Brand: la firma */
+.about__signature {
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (min-width: 600px) {
+    .about__media {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* Desktop: retrato a la izquierda, a sangre; texto a la derecha */
+@media (min-width: 1024px) {
+    .section--about {
+        flex-direction: row;
+        min-height: 640px;
+    }
+
+    .about__media {
+        flex: 0 0 440px;              /* Fixed width */
+        aspect-ratio: auto;           /* el alto lo da la sección */
+    }
+
+    .about__content {
+        flex: 1;                      /* Fill container */
+        justify-content: center;
+        padding: var(--spacing-3xl) var(--page-gutter) var(--spacing-3xl) var(--spacing-2xl);
+    }
+}
+
+@media (min-width: 1280px) {
+    .section--about {
+        min-height: 800px;            /* 640 × 800 en Figma (4:5) */
+    }
+
+    .about__media {
+        flex-basis: 640px;
+    }
+
+    .about__content {
+        padding-left: var(--spacing-4xl);
+    }
+}
