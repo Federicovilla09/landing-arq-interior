@@ -273,53 +273,77 @@
   color: var(--color-text-secondary);
 }
 
+/* ---------- Process row: paso del proceso (ficha técnica) ---------- */
 
-/* ---------- Step ---------- */
-.step {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
+/* Mobile: apilado */
+.process-row {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) 0 var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
-.step__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid var(--color-border-strong);
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
+/* Label/Step-Number: el número grande, como una referencia de plano */
+.process-row__number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 /* State: Highlighted (el paso 1, el que inicia la consulta) */
-.step--highlighted .step__number {
-  background: var(--color-action-primary);
-  border-color: var(--color-action-primary);
-  color: var(--color-text-inverse);
+.process-row--highlighted .process-row__number {
+  color: var(--color-action-primary);
 }
 
 /* Se ve como Heading/H3, aunque sea un <h4> */
-.step__title {
+.process-row__title {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.3;
 }
 
-.step__text {
+.process-row__text {
   color: var(--color-text-secondary);
 }
 
-/* "Recibís: …" separado por una línea */
-.step__receive {
-  padding-top: var(--spacing-sm);
-  border-top: 1px solid var(--color-border-default);
+.process-row__receive {
+  padding-top: var(--spacing-xs);
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* La etiqueta "Recibís", como Label/Overline */
+.process-row__receive span {
+  display: block;
+  margin-bottom: var(--spacing-2xs);
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+/* Desktop: una fila de cuatro columnas alineadas entre todos los pasos */
+@media (min-width: 1024px) {
+  .process-row {
+    grid-template-columns: 72px 200px 1fr 220px;
+    column-gap: var(--spacing-lg);
+    align-items: start;
+    padding: var(--spacing-md) 0;
+  }
+
+  .process-row__number {
+    font-size: 40px;
+  }
+
+  .process-row__receive {
+    padding-top: 0;
+  }
+}
+
 
 /* ---------- Back to top: volver al inicio ---------- */
 .back-to-top {

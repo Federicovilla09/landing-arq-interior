@@ -306,64 +306,35 @@
 .process {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-xl);
 }
 
 .process__stage {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xs);
 }
 
-/* Mobile: línea de tiempo vertical */
-.step-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
+.process-list {
     margin: 0;
-    padding: 0 0 0 var(--spacing-md);
-    border-left: 1px solid var(--color-border-default);
+    padding: 0;
     list-style: none;
 }
 
-/* Tablet: los pasos de cada etapa en fila */
-@media (min-width: 600px) {
-    .step-list {
-        flex-direction: row;
-        gap: var(--spacing-lg);
-        padding-left: 0;
-        border-left: 0;
-    }
-
-    .step {
-        flex: 1;
-    }
-}
-
-/* Desktop: las dos etapas lado a lado (40 % / 60 %) */
-@media (min-width: 1024px) {
+/* Desde 1280: encabezado a la izquierda, pasos a la derecha */
+@media (min-width: 1280px) {
     .section--process {
-        min-height: calc(100svh - var(--header-h));   /* entra en una pantalla */
-        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-4xl);
+    }
+
+    .section--process .section__header {
+        flex: 0 0 360px;          /* Fixed width: 360 */
     }
 
     .process {
-        flex-direction: row;
-        gap: var(--spacing-xl);
-    }
-
-    .process__stage {
-        flex: 3 1 0;              /* 3 partes: 60 % */
-    }
-
-    .process__stage--before {
-        flex: 2 1 0;              /* 2 partes: 40 % */
-    }
-
-    /* La línea que separa las etapas */
-    .process__stage + .process__stage {
-        padding-left: var(--spacing-xl);
-        border-left: 1px solid var(--color-border-default);
+        flex: 1;                  /* Fill container */
     }
 }
 
