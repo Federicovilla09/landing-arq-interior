@@ -6,6 +6,7 @@ import "@fontsource/manrope/500.css";    // Medium: menú y rótulos
 import "@fontsource/manrope/600.css";    // SemiBold: botones, H3 y sobretítulos
 import "./styles/layout.css";
 import "./styles/components.css";
+import "./styles/sections.css";
 
 // Estilos: el orden importa. Primero los tokens, después lo que los usa.
 import "./styles/tokens.css";

@@ -156,3 +156,19 @@
       border-color var(--duration-fast) var(--ease-out);
   }
 }
+
+/* ---------- Image/Photo: rótulo "Imagen ilustrativa" ---------- */
+.media-label {
+  position: absolute;
+  left: var(--spacing-md);
+  bottom: var(--spacing-md);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+
+  background: var(--color-bg-page);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
