@@ -8,18 +8,27 @@ export function initStacking(): void {
   const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-panel]"));
   if (panels.length === 0) return;
 
-  // ---------- 1. Medir el alto de cada sección ----------
-  // ResizeObserver avisa cada vez que un elemento cambia de tamaño
-  // (al cargar, al cambiar el ancho de la ventana, si cambia el texto…).
+  // ---------- 1. Medir el alto de cada sección y del footer ----------
+  const footer = document.querySelector<HTMLElement>(".site-footer");
+
   const resizeObserver = new ResizeObserver((entries) => {
     for (const entry of entries) {
-      const panel = entry.target as HTMLElement;
-      panel.style.setProperty("--panel-h", `${panel.offsetHeight}px`);
+      const element = entry.target as HTMLElement;
+
+      if (element === footer) {
+        // El footer se guarda en la raíz: lo usa Contacto
+        document.documentElement.style.setProperty("--footer-h", `${element.offsetHeight}px`);
+      } else {
+        // Cada sección guarda su propio alto
+        element.style.setProperty("--panel-h", `${element.offsetHeight}px`);
+      }
     }
   });
+
   for (const panel of panels) {
     resizeObserver.observe(panel);
   }
+  if (footer) resizeObserver.observe(footer);
 
   // ---------- 2. Que el foco nunca quede tapado ----------
   // La misma condición que la media query del CSS

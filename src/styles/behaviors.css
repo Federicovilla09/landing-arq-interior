@@ -1,9 +1,18 @@
 /* ==========================================================
    Comportamientos · el CSS que trabaja junto con los scripts
+
+   Índice
+   1. CTA del header      (header-cta.ts)
+   2. Menú mobile         (menu.ts)
+   3. Paneles apilados    (stacking.ts)
    ========================================================== */
 
-/* ---------- CTA del header (header-cta.ts) ----------
-   Oculto hasta que el botón del hero sale de la pantalla. */
+
+/* ==========================================================
+   1. CTA del header
+   Oculto hasta que el botón del hero sale de la pantalla.
+   ========================================================== */
+
 [data-header-cta] {
   visibility: hidden;
   opacity: 0;
@@ -21,8 +30,12 @@
   }
 }
 
-/* ---------- Menú mobile (menu.ts) ----------
-   <dialog> a pantalla completa. Solo se usa por debajo de 1024 px. */
+
+/* ==========================================================
+   2. Menú mobile
+   <dialog> a pantalla completa. Solo se usa por debajo de 1024 px.
+   ========================================================== */
+
 .menu {
   width: 100%;
   max-width: none;
@@ -87,10 +100,14 @@ html:has(.menu[open]) {
   margin: 0 var(--page-gutter);
 }
 
-/* ---------- Paneles apilados (stacking.ts) ----------
-   Solo en desktop con alto suficiente y sin preferencia de movimiento reducido.
-   Cada sección queda fija y la siguiente la cubre.
-   --panel-h (el alto de cada sección) lo mide stacking.ts. */
+
+/* ==========================================================
+   3. Paneles apilados
+   Solo en desktop con alto suficiente y sin preferencia de
+   movimiento reducido. Cada sección queda fija y la siguiente
+   la cubre. --panel-h y --footer-h los mide stacking.ts.
+   ========================================================== */
+
 @media (min-width: 1024px) and (min-height: 720px) and (prefers-reduced-motion: no-preference) {
   [data-panel] {
     position: sticky;
@@ -103,6 +120,13 @@ html:has(.menu[open]) {
   [data-panel] + [data-panel] {
     box-shadow: 0 -12px 32px rgb(0 0 0 / 0.12);
     border-top: 1px solid var(--color-border-default);
+  }
+
+    /* Contacto es la última sección: al final de la página, Contacto y el
+     footer juntos llenan la pantalla, así no se ve la sección anterior. */
+  .section--contact {
+    min-height: calc(100svh - var(--header-h) - var(--footer-h, 0px));
+    justify-content: center;
   }
 }
 
