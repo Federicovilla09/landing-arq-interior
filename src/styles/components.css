@@ -68,3 +68,91 @@
     font-size: 16px;
   }
 }
+
+/* ---------- Nav item: anclas del header ---------- */
+.nav-item {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-2xs);
+  border-bottom: 2px solid transparent;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+/* Hover: subrayado fino (distinto de la línea del estado Active) */
+.nav-item:hover {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* En la sección activa no hace falta: ya tiene su línea */
+.nav-item[aria-current="true"]:hover {
+  text-decoration: none;
+}
+
+/* ---------- Marca del header: link sin aspecto de link ---------- */
+.site-header__brand {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+/* ---------- Icon button: 44 × 44 ---------- */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 0;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--color-action-secondary-hover);
+}
+
+/* ---------- Link de texto con ícono ---------- */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2xs);
+  padding: var(--spacing-sm) 0;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text-primary);
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Datos de contacto del footer: hover sobre fondo oscuro */
+.contact-item:hover {
+  color: var(--color-text-inverse-secondary);
+}
+
+/* ---------- Transiciones de color ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .nav-item,
+  .icon-button,
+  .link,
+  .contact-item {
+    transition:
+      color var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out),
+      border-color var(--duration-fast) var(--ease-out);
+  }
+}
