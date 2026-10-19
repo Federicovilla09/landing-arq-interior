@@ -10,12 +10,14 @@ import "./styles/sections.css";
 import "./styles/behaviors.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
-import { initHeaderCta } from "./scripts/header-cta";
+import { initShowAfterHero } from "./scripts/show-after-hero";
 import { initScrollSpy } from "./scripts/scroll-spy";
 import { initMenu } from "./scripts/menu";
 import { initStacking } from "./scripts/stacking";
+import { initSmoothScroll } from "./scripts/smooth-scroll";
 
-initHeaderCta();
+initShowAfterHero();
 initScrollSpy();
 initMenu();
 initStacking();
+initSmoothScroll();

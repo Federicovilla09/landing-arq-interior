@@ -28,8 +28,8 @@
 
     <!-- Acciones -->
     <div class="site-header__actions">
-      <a class="button button--primary" href="#contacto" data-header-cta>
-        Consultar<span class="site-header__cta-long"> por mi espacio</span>
+      <a class="button button--primary" href="#contacto" data-show-after-hero>
+          Consultar<span class="site-header__cta-long"> por mi espacio</span>
       </a>
 
       <button class="icon-button" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"
@@ -324,6 +324,14 @@
       Propuesta conceptual de sitio web · Imágenes ilustrativas
     </p>
   </footer>
+
+  <!-- Volver arriba: aparece cuando el hero sale de la pantalla -->
+  <a class="back-to-top" href="#inicio" aria-label="Volver al inicio" data-show-after-hero>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </a>
 
   <!-- Menú mobile (menos de 1024 px) -->
   <dialog id="menu" class="menu" aria-label="Menú">

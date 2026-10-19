@@ -2,7 +2,7 @@
    Comportamientos · el CSS que trabaja junto con los scripts
 
    Índice
-   1. CTA del header      (header-cta.ts)
+   1. Elementos que aparecen después del hero (show-after-hero.ts)
    2. Menú mobile         (menu.ts)
    3. Paneles apilados    (stacking.ts)
    ========================================================== */
@@ -13,20 +13,22 @@
    Oculto hasta que el botón del hero sale de la pantalla.
    ========================================================== */
 
-[data-header-cta] {
+[data-show-after-hero] {
   visibility: hidden;
   opacity: 0;
 }
 
-[data-header-cta][data-visible] {
+[data-show-after-hero][data-visible] {
   visibility: visible;
   opacity: 1;
 }
 
 /* Fundido suave, solo si la persona no pidió reducir el movimiento */
 @media (prefers-reduced-motion: no-preference) {
-  [data-header-cta] {
-    transition: opacity var(--duration-fast) var(--ease-out);
+  [data-show-after-hero] {
+    transition:
+      opacity var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out);
   }
 }
 
@@ -96,7 +98,7 @@ html:has(.menu[open]) {
 }
 
 /* El CTA del menú, con los márgenes de la página */
-.menu > .button {
+.menu>.button {
   margin: 0 var(--page-gutter);
 }
 
@@ -117,12 +119,12 @@ html:has(.menu[open]) {
   }
 
   /* Señal de capa: cada sección que cubre a la anterior */
-  [data-panel] + [data-panel] {
+  [data-panel]+[data-panel] {
     box-shadow: 0 -12px 32px rgb(0 0 0 / 0.12);
     border-top: 1px solid var(--color-border-default);
   }
 
-    /* Contacto es la última sección: al final de la página, Contacto y el
+  /* Contacto es la última sección: al final de la página, Contacto y el
      footer juntos llenan la pantalla, así no se ve la sección anterior. */
   .section--contact {
     min-height: calc(100svh - var(--header-h) - var(--footer-h, 0px));
@@ -132,7 +134,7 @@ html:has(.menu[open]) {
 
 /* Por debajo de 1024: la capa se insinúa, sin movimiento */
 @media (max-width: 1023px) {
-  [data-panel] + [data-panel] {
+  [data-panel]+[data-panel] {
     box-shadow: 0 -4px 12px rgb(0 0 0 / 0.08);
     border-top: 1px solid var(--color-border-default);
   }

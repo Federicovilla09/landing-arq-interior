@@ -191,3 +191,10 @@ main {
     padding-bottom: var(--spacing-3xl);
   }
 }
+
+/* Mobile: espacio extra abajo para que el botón "volver arriba" no tape la nota */
+@media (max-width: 599px) {
+  .site-footer {
+    padding-bottom: calc(var(--spacing-2xl) + 44px + var(--spacing-md));
+  }
+}

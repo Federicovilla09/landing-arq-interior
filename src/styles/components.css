@@ -171,7 +171,8 @@
   .nav-item,
   .icon-button,
   .link,
-  .contact-item {
+  .contact-item
+  .back-to-top {
     transition:
       color var(--duration-fast) var(--ease-out),
       background-color var(--duration-fast) var(--ease-out),
@@ -318,4 +319,36 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* ---------- Back to top: volver al inicio ---------- */
+.back-to-top {
+  position: fixed;
+  right: var(--page-gutter);
+  bottom: var(--spacing-md);
+  z-index: 10;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  color: var(--color-text-primary);
+  /* Fondo al 80 %, con desenfoque de lo que pasa por detrás */
+  background: color-mix(in srgb, var(--color-bg-page) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-floating);
+}
+
+.back-to-top:hover {
+  background: color-mix(in srgb, var(--color-action-secondary-hover) 90%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .back-to-top {
+    bottom: var(--spacing-lg);
+  }
 }

@@ -63,7 +63,8 @@
 
   /* --- Layout --- */
   --page-gutter: var(--spacing-md);
-  --header-h: 64px; /* alto del header en mobile */
+  --header-h: 64px;
+  /* alto del header en mobile */
 
   /* margen lateral: 16 en mobile */
   --section-space: var(--spacing-2xl);
@@ -72,28 +73,37 @@
   /* --- Interacción --- */
   --duration-fast: 150ms;
   --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  /* --- Elevación --- */
+  --elevation-floating: 0 2px 4px rgb(59 42 36 / 0.10), 0 8px 24px rgb(59 42 36 / 0.18);
 }
 
 /* Tablet: desde 600 px */
 @media (min-width: 600px) {
   :root {
-    --page-gutter: var(--spacing-xl); /* 32 */
-    --section-space: var(--spacing-4xl); /* 80 */
+    --page-gutter: var(--spacing-xl);
+    /* 32 */
+    --section-space: var(--spacing-4xl);
+    /* 80 */
   }
 }
 
 /* Desktop compacto: desde 1024 px */
 @media (min-width: 1024px) {
   :root {
-    --page-gutter: var(--spacing-2xl); /* 48 */
-    --header-h: 72px; /* alto del header en desktop */
+    --page-gutter: var(--spacing-2xl);
+    /* 48 */
+    --header-h: 72px;
+    /* alto del header en desktop */
   }
 }
 
 /* Desktop: desde 1280 px */
 @media (min-width: 1280px) {
   :root {
-    --page-gutter: var(--spacing-4xl); /* 80 */
-    --section-space: var(--spacing-5xl); /* 120 */
+    --page-gutter: var(--spacing-4xl);
+    /* 80 */
+    --section-space: var(--spacing-5xl);
+    /* 120 */
   }
 }
