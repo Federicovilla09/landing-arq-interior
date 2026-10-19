@@ -11,5 +11,7 @@ import "./styles/behaviors.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
 import { initHeaderCta } from "./scripts/header-cta";
+import { initScrollSpy } from "./scripts/scroll-spy";
 
 initHeaderCta();
+initScrollSpy();
