@@ -20,3 +20,69 @@
     transition: opacity var(--duration-fast) var(--ease-out);
   }
 }
+
+/* ---------- Menú mobile (menu.ts) ----------
+   <dialog> a pantalla completa. Solo se usa por debajo de 1024 px. */
+.menu {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+/* Solo cuando está abierto: un dialog cerrado tiene que seguir oculto */
+.menu[open] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Sin oscurecer el fondo: el menú ya ocupa toda la pantalla */
+.menu::backdrop {
+  background: transparent;
+}
+
+/* Bloquear el scroll de la página mientras el menú está abierto */
+html:has(.menu[open]) {
+  overflow: hidden;
+}
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+  padding: 0 var(--page-gutter);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.menu__links {
+  margin: 0;
+  padding: 0 var(--page-gutter);
+  list-style: none;
+}
+
+.menu__links li {
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+/* Las anclas grandes, como Heading/H2/Mobile */
+.menu__links a {
+  display: block;
+  padding: var(--spacing-sm) 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+/* El CTA del menú, con los márgenes de la página */
+.menu > .button {
+  margin: 0 var(--page-gutter);
+}

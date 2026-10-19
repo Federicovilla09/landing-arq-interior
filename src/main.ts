@@ -12,6 +12,8 @@ import "./styles/tokens.css";
 import "./styles/base.css";
 import { initHeaderCta } from "./scripts/header-cta";
 import { initScrollSpy } from "./scripts/scroll-spy";
+import { initMenu } from "./scripts/menu";
 
 initHeaderCta();
 initScrollSpy();
+initMenu();
