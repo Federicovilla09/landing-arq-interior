@@ -366,3 +366,38 @@
         border-left: 1px solid var(--color-border-default);
     }
 }
+
+/* ==========================================================
+   6. Contacto
+   ========================================================== */
+
+/* Todo centrado, sobre el fondo oscuro (colores en layout.css) */
+.section--contact {
+    align-items: center;
+    text-align: center;
+}
+
+.contact__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+/* Mobile: botón a todo el ancho, más fácil de tocar */
+.contact__action .button {
+    width: 100%;
+}
+
+.contact__note {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-inverse-secondary);
+}
+
+@media (min-width: 600px) {
+    .contact__action .button {
+        width: auto;
+    }
+}
