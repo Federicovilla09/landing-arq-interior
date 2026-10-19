@@ -1,12 +1,21 @@
 /* ==========================================================
    Secciones · el layout específico de cada una
-   Orden: cada sección completa, primero mobile y después
+
+   Índice
+   1. Hero
+   2. Qué puedo resolver
+   3. Proyectos
+   4. Sobre mí
+   5. Cómo trabajo
+
+   Orden dentro de cada sección: primero mobile y después
    sus media queries (600 → 1024 → 1280).
+   Los componentes (botones, tarjetas, pasos) están en components.css.
    ========================================================== */
 
 
 /* ==========================================================
-   Hero
+   1. Hero
    ========================================================== */
 
 /* El hero no usa el padding general: la imagen va a sangre */
@@ -23,15 +32,15 @@
 }
 
 .hero__media {
-    position: relative;       /* referencia para el rótulo */
-    margin: 0;                /* <figure> trae márgenes por defecto */
-    aspect-ratio: 5 / 6;      /* proporción en mobile */
+    position: relative;           /* referencia para el rótulo */
+    margin: 0;                    /* <figure> trae márgenes por defecto */
+    aspect-ratio: 5 / 6;          /* proporción en mobile */
 }
 
 .hero__media img {
     width: 100%;
     height: 100%;
-    object-fit: cover;        /* como "Fill" en Figma: llena y recorta */
+    object-fit: cover;            /* como "Fill" en Figma: llena y recorta */
 }
 
 /* Botones de acción: uno debajo del otro en mobile */
@@ -86,7 +95,7 @@
 
 
 /* ==========================================================
-   Qué puedo resolver
+   2. Qué puedo resolver
    ========================================================== */
 
 .need-list {
@@ -111,7 +120,7 @@
 
 
 /* ==========================================================
-   Proyectos
+   3. Proyectos
    ========================================================== */
 
 /* Encabezado y link "Ver más en Instagram" */
@@ -212,8 +221,9 @@
     }
 }
 
+
 /* ==========================================================
-   Sobre mí
+   4. Sobre mí
    ========================================================== */
 
 /* Como el hero: la imagen va a sangre, sin el padding general */
@@ -223,16 +233,16 @@
 }
 
 .about__media {
-    position: relative;
+    position: relative;           /* referencia para el rótulo */
     margin: 0;
-    aspect-ratio: 4 / 5;              /* 390 × 488 en Figma */
+    aspect-ratio: 4 / 5;          /* 390 × 488 en Figma */
 }
 
 .about__media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;      /* prioriza la parte de arriba: la cara */
+    object-position: center 15%;  /* prioriza la parte de arriba: la cara */
 }
 
 .about__content {
@@ -263,12 +273,12 @@
     }
 
     .about__media {
-        flex: 0 0 440px;              /* Fixed width */
-        aspect-ratio: auto;           /* el alto lo da la sección */
+        flex: 0 0 440px;          /* Fixed width */
+        aspect-ratio: auto;       /* el alto lo da la sección */
     }
 
     .about__content {
-        flex: 1;                      /* Fill container */
+        flex: 1;                  /* Fill container */
         justify-content: center;
         padding: var(--spacing-3xl) var(--page-gutter) var(--spacing-3xl) var(--spacing-2xl);
     }
@@ -276,7 +286,7 @@
 
 @media (min-width: 1280px) {
     .section--about {
-        min-height: 800px;            /* 640 × 800 en Figma (4:5) */
+        min-height: 800px;        /* 640 × 800 en Figma (4:5) */
     }
 
     .about__media {
@@ -285,5 +295,74 @@
 
     .about__content {
         padding-left: var(--spacing-4xl);
+    }
+}
+
+
+/* ==========================================================
+   5. Cómo trabajo
+   ========================================================== */
+
+.process {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+}
+
+.process__stage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Mobile: línea de tiempo vertical */
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin: 0;
+    padding: 0 0 0 var(--spacing-md);
+    border-left: 1px solid var(--color-border-default);
+    list-style: none;
+}
+
+/* Tablet: los pasos de cada etapa en fila */
+@media (min-width: 600px) {
+    .step-list {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .step {
+        flex: 1;
+    }
+}
+
+/* Desktop: las dos etapas lado a lado (40 % / 60 %) */
+@media (min-width: 1024px) {
+    .section--process {
+        min-height: calc(100svh - var(--header-h));   /* entra en una pantalla */
+        justify-content: center;
+    }
+
+    .process {
+        flex-direction: row;
+        gap: var(--spacing-xl);
+    }
+
+    .process__stage {
+        flex: 3 1 0;              /* 3 partes: 60 % */
+    }
+
+    .process__stage--before {
+        flex: 2 1 0;              /* 2 partes: 40 % */
+    }
+
+    /* La línea que separa las etapas */
+    .process__stage + .process__stage {
+        padding-left: var(--spacing-xl);
+        border-left: 1px solid var(--color-border-default);
     }
 }

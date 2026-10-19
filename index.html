@@ -169,8 +169,9 @@
     <!-- 04 · Sobre mí -->
     <section id="sobre-mi" class="section section--about" aria-labelledby="sobre-mi-titulo" data-panel>
       <figure class="about__media">
-        <img src="public/images/sobre-mi-retrato.webp" alt="Imagen ilustrativa: retrato de una mujer con una taza de café"
-          width="800" height="1200" loading="lazy" />
+        <img src="public/images/sobre-mi-retrato.webp"
+          alt="Imagen ilustrativa: retrato de una mujer con una taza de café" width="800" height="1200"
+          loading="lazy" />
         <figcaption class="media-label">Imagen ilustrativa</figcaption>
       </figure>
 
@@ -194,14 +195,62 @@
     </section>
 
     <!-- 05 · Cómo trabajo -->
-    <section id="como-trabajo" class="section section--subtle" aria-labelledby="como-trabajo-titulo" data-panel>
+    <section id="como-trabajo" class="section section--subtle section--process" aria-labelledby="como-trabajo-titulo"
+      data-panel>
       <div class="section__header">
         <p class="overline">04 · Cómo trabajo</p>
         <h2 id="como-trabajo-titulo">Qué pasa cuando me escribís</h2>
-        <p class="lead">
-          Primero nos conocemos y ves una propuesta. Si decidís avanzar,
-          seguimos.
-        </p>
+        <p class="lead">Primero nos conocemos y ves una propuesta. Si decidís avanzar, seguimos.</p>
+      </div>
+
+      <div class="process">
+        <!-- Etapa 1 -->
+        <div class="process__stage process__stage--before">
+          <div class="stage-label">
+            <h3>Antes de decidir</h3>
+            <p>Conocernos y ver una primera propuesta</p>
+          </div>
+          <ol class="step-list" role="list">
+            <li class="step step--highlighted">
+              <span class="step__number">1</span>
+              <h4 class="step__title">Conversación</h4>
+              <p class="step__text">Me contás cómo vivís, qué necesitás y qué ideas tenés.</p>
+            </li>
+            <li class="step">
+              <span class="step__number">2</span>
+              <h4 class="step__title">Propuesta inicial</h4>
+              <p class="step__text">Te presento una primera propuesta para tu espacio.</p>
+              <p class="step__receive">Recibís: propuesta inicial y presupuesto.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Etapa 2 -->
+        <div class="process__stage">
+          <div class="stage-label">
+            <h3>Si avanzamos</h3>
+            <p>Desarrollo del proyecto</p>
+          </div>
+          <ol class="step-list" role="list" start="3">
+            <li class="step">
+              <span class="step__number">3</span>
+              <h4 class="step__title">Relevamiento</h4>
+              <p class="step__text">Si decidís avanzar, relevo el espacio en detalle.</p>
+            </li>
+            <li class="step">
+              <span class="step__number">4</span>
+              <h4 class="step__title">Presentación y ajustes</h4>
+              <p class="step__text">Te muestro la propuesta en imágenes y la ajustamos juntos.</p>
+              <p class="step__receive">Recibís: presentación visual de la propuesta.</p>
+            </li>
+            <li class="step">
+              <span class="step__number">5</span>
+              <h4 class="step__title">Entrega</h4>
+              <p class="step__text">Cierro el proyecto según el alcance que definimos.</p>
+              <p class="step__receive">Recibís: materiales, detalles y presupuesto de ejecución.</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 

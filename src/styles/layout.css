@@ -1,5 +1,11 @@
 /* ==========================================================
-   Layout · estructura de las secciones
+   Layout · estructura general de la página
+   1. Secciones   2. Header   3. Footer
+   ========================================================== */
+
+
+/* ==========================================================
+   1. Secciones
    ========================================================== */
 
 /* Cada sección es un auto layout vertical: encabezado y contenido */
@@ -19,12 +25,6 @@
   max-width: 720px;
 }
 
-@media (min-width: 1024px) {
-  .section {
-    gap: var(--spacing-2xl);
-  }
-}
-
 /* Fondos alternados, como en Figma */
 .section--subtle,
 .section--hero {
@@ -42,32 +42,28 @@
   color: var(--color-text-inverse-secondary);
 }
 
-/* En el hero, más aire entre bloques */
-.section--hero {
-  gap: var(--spacing-lg);
+@media (min-width: 1024px) {
+  .section {
+    gap: var(--spacing-2xl);
+  }
 }
 
 
 /* ==========================================================
-   Header fijo
+   2. Header fijo
    ========================================================== */
 
 .site-header {
-  position: fixed;
-  /* queda clavado arriba al hacer scroll */
+  position: fixed;                  /* queda clavado arriba al hacer scroll */
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
-  /* por encima de las secciones */
+  z-index: 10;                      /* por encima de las secciones */
   height: var(--header-h);
 
-  display: flex;
-  /* auto layout horizontal */
-  align-items: center;
-  /* centrado vertical */
-  justify-content: space-between;
-  /* marca a la izquierda, acciones a la derecha */
+  display: flex;                    /* auto layout horizontal */
+  align-items: center;              /* centrado vertical */
+  justify-content: space-between;   /* marca a la izquierda, acciones a la derecha */
   gap: var(--spacing-lg);
   padding: 0 var(--page-gutter);
 
@@ -96,13 +92,19 @@
   display: none;
 }
 
+/* El contenido empieza debajo del header */
+main {
+  padding-top: var(--header-h);
+}
+
 /* Desde 1024: aparecen las anclas y se oculta el botón de menú */
 @media (min-width: 1024px) {
   .site-header__nav {
     display: block;
   }
 
-  [data-menu-open] {
+  /* .site-header suma especificidad para ganarle a .icon-button */
+  .site-header [data-menu-open] {
     display: none;
   }
 }
@@ -118,13 +120,9 @@
   }
 }
 
-/* El contenido empieza debajo del header */
-main {
-  padding-top: var(--header-h);
-}
 
 /* ==========================================================
-   Footer
+   3. Footer
    ========================================================== */
 
 .site-footer {
@@ -154,13 +152,11 @@ main {
   color: var(--color-text-inverse-secondary);
 }
 
-/* Contacto */
 .site-footer__contact {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2xs);
-  font-style: normal;
-  /* <address> viene en cursiva por defecto */
+  font-style: normal;               /* <address> viene en cursiva por defecto */
 }
 
 .site-footer__contact .overline {
@@ -171,17 +167,6 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-/* Cada dato: ícono + texto alineados */
-.contact-item {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-xs) 0;
-  color: var(--color-text-inverse);
-  font-weight: 600;
-  text-underline-offset: 3px;
 }
 
 /* La nota final, separada por una línea */
