@@ -1,99 +1,213 @@
 /* ==========================================================
    Secciones · el layout específico de cada una
+   Orden: cada sección completa, primero mobile y después
+   sus media queries (600 → 1024 → 1280).
    ========================================================== */
 
-/* ---------- Hero ---------- */
+
+/* ==========================================================
+   Hero
+   ========================================================== */
 
 /* El hero no usa el padding general: la imagen va a sangre */
 .section--hero {
-  padding: 0;
-  gap: 0;
+    padding: 0;
+    gap: 0;
 }
 
 .hero__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-2xl) var(--page-gutter);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--page-gutter);
 }
 
 .hero__media {
-  position: relative;      /* referencia para el rótulo */
-  margin: 0;               /* <figure> trae márgenes por defecto */
-  aspect-ratio: 5 / 6;     /* proporción en mobile */
+    position: relative;       /* referencia para el rótulo */
+    margin: 0;                /* <figure> trae márgenes por defecto */
+    aspect-ratio: 5 / 6;      /* proporción en mobile */
 }
 
 .hero__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* como "Fill" en Figma: llena y recorta */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* como "Fill" en Figma: llena y recorta */
 }
 
-/* Botones: uno debajo del otro en mobile */
+/* Botones de acción: uno debajo del otro en mobile */
 .section__actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
-/* Tablet: desde 600 px */
 @media (min-width: 600px) {
-  .hero__content {
-    padding: var(--section-space) var(--page-gutter);
-  }
-  .hero__media {
-    aspect-ratio: 3 / 2;
-  }
-  .section__actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+    .hero__content {
+        padding: var(--section-space) var(--page-gutter);
+    }
+
+    .hero__media {
+        aspect-ratio: 3 / 2;
+    }
+
+    .section__actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
-/* Desktop: desde 1024 px, texto e imagen en dos columnas */
 @media (min-width: 1024px) {
-  .section--hero {
-    flex-direction: row;
-    min-height: calc(100svh - var(--header-h));   /* ocupa la pantalla */
-  }
-  .hero__content {
-    flex: 1;                     /* Fill container */
-    justify-content: center;     /* texto centrado en vertical */
-    padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-3xl) var(--page-gutter);
-  }
-  .hero__media {
-    flex: 0 0 440px;             /* Fixed width: 440 */
-    aspect-ratio: auto;          /* el alto lo da el hero */
-  }
+    .section--hero {
+        flex-direction: row;
+        min-height: calc(100svh - var(--header-h));   /* ocupa la pantalla */
+    }
+
+    .hero__content {
+        flex: 1;                  /* Fill container */
+        justify-content: center;  /* texto centrado en vertical */
+        padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-3xl) var(--page-gutter);
+    }
+
+    .hero__media {
+        flex: 0 0 440px;          /* Fixed width: 440 */
+        aspect-ratio: auto;       /* el alto lo da el hero */
+    }
 }
 
-/* Desktop grande: desde 1280 px */
 @media (min-width: 1280px) {
-  .hero__content {
-    padding-right: var(--spacing-4xl);
-  }
-  .hero__media {
-    flex-basis: 640px;           /* Fixed width: 640 */
-  }
+    .hero__content {
+        padding-right: var(--spacing-4xl);
+    }
+
+    .hero__media {
+        flex-basis: 640px;        /* Fixed width: 640 */
+    }
 }
 
-/* ---------- Qué puedo resolver ---------- */
+
+/* ==========================================================
+   Qué puedo resolver
+   ========================================================== */
+
 .need-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-/* Desktop: las tres en fila, del mismo alto */
 @media (min-width: 1024px) {
-  .need-list {
-    flex-direction: row;
-    gap: var(--spacing-lg);
-  }
-  .card-need {
-    flex: 1;
-  }
+    .need-list {
+        flex-direction: row;      /* las tres en fila */
+        gap: var(--spacing-lg);
+    }
+
+    .card-need {
+        flex: 1;                  /* mismo ancho y mismo alto */
+    }
+}
+
+
+/* ==========================================================
+   Proyectos
+   ========================================================== */
+
+/* Encabezado y link "Ver más en Instagram" */
+.section__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+/* Grilla: una columna en mobile */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Mobile: las cuatro imágenes con la misma proporción (358 × 480 en Figma) */
+.project-grid .card-project__media {
+    aspect-ratio: 3 / 4;
+}
+
+/* Cierre: pregunta y CTA */
+.projects__cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border-default);
+}
+
+.projects__question {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+/* Tablet: dos columnas iguales, imágenes cuadradas */
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .project-grid .card-project__media {
+        aspect-ratio: 1 / 1;
+    }
+
+    .projects__cta {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* Desktop: grilla editorial de 11 columnas (7 + 4 / 4 + 7) */
+@media (min-width: 1024px) {
+    .section__top {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(11, 1fr);
+    }
+
+    /* Fila 1: grande + chico · Fila 2: chico + grande */
+    .project-grid li:nth-child(1),
+    .project-grid li:nth-child(4) {
+        grid-column: span 7;
+    }
+
+    .project-grid li:nth-child(2),
+    .project-grid li:nth-child(3) {
+        grid-column: span 4;
+    }
+
+    /* Mismo alto en toda la fila */
+    .project-grid .card-project__media {
+        aspect-ratio: auto;
+        height: 400px;
+    }
+
+    .projects__question {
+        font-family: var(--font-display);
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1.12;
+    }
+}
+
+@media (min-width: 1280px) {
+    .project-grid .card-project__media {
+        height: 600px;
+    }
 }
