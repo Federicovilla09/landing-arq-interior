@@ -38,8 +38,12 @@ h1,
 h2,
 h3,
 h3,
+.lead {
+  text-wrap: balance; 
+}
+
 p {
-  margin: 0;
+  text-wrap: pretty;
 }
 
 /* Heading/H1 · Alexandria Light */

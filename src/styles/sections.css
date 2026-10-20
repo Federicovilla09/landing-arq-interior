@@ -78,8 +78,8 @@
     }
 
     .hero__media {
-        flex: 0 0 440px;          /* Fixed width: 440 */
-        aspect-ratio: auto;       /* el alto lo da el hero */
+        flex: 0 0 clamp(440px, 45vw, 640px);  
+        aspect-ratio: auto;
     }
 }
 
