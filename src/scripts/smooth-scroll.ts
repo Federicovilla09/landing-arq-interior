@@ -7,33 +7,10 @@
  * 3. Con movimiento reducido, salta directo, sin animación.
  */
 
+import { headerHeight, pagePosition } from "./page-position";
+
 // La misma condición que usa el CSS para la preferencia de movimiento
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-// ---------- 1. Dónde está realmente un elemento en la página ----------
-function pagePosition(target: HTMLElement): number {
-  const main = document.querySelector<HTMLElement>("main");
-  const panel = target.closest<HTMLElement>("[data-panel]");
-
-  // Fuera de las secciones apiladas, la posición en pantalla es confiable
-  if (!main || !panel) {
-    return target.getBoundingClientRect().top + window.scrollY;
-  }
-
-  // Dentro: sumar el alto de todas las secciones anteriores
-  let top = main.getBoundingClientRect().top + window.scrollY;
-  top += parseFloat(getComputedStyle(main).paddingTop);
-
-  const panels = Array.from(main.querySelectorAll<HTMLElement>(":scope > [data-panel]"));
-  for (const p of panels) {
-    if (p === panel) break;
-    top += p.offsetHeight;
-  }
-
-  // Si el destino está adentro de la sección, sumar su distancia al borde de arriba
-  const offsetInPanel = target.getBoundingClientRect().top - panel.getBoundingClientRect().top;
-  return top + offsetInPanel;
-}
 
 // ---------- 2. La curva: arranca suave, acelera y frena al final ----------
 function easeInOutCubic(t: number): number {
@@ -92,9 +69,7 @@ export function initSmoothScroll(): void {
 
     event.preventDefault();   // en lugar del salto del navegador, el nuestro
 
-    const header = document.querySelector<HTMLElement>(".site-header");
-    const headerHeight = header ? header.offsetHeight : 0;
-    const to = Math.max(0, pagePosition(target) - headerHeight);
+      const to = Math.max(0, pagePosition(target) - headerHeight());
 
     scrollToPosition(to, () => {
       // Al llegar: actualizar la URL y llevar el foco a la sección

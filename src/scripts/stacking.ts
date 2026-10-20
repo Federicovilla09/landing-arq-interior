@@ -1,9 +1,11 @@
 /**
  * Paneles apilados (desktop)
  * El efecto es CSS (behaviors.css). Este script:
- *  1. Mide el alto de cada sección y lo guarda en --panel-h.
+ *  1. Mide el alto de cada sección (--panel-h) y del footer (--footer-h).
  *  2. Evita que el foco del teclado quede tapado por otra sección.
  */
+import { headerHeight, pagePosition } from "./page-position";
+
 export function initStacking(): void {
   const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-panel]"));
   if (panels.length === 0) return;
@@ -14,24 +16,18 @@ export function initStacking(): void {
   const resizeObserver = new ResizeObserver((entries) => {
     for (const entry of entries) {
       const element = entry.target as HTMLElement;
-
       if (element === footer) {
-        // El footer se guarda en la raíz: lo usa Contacto
         document.documentElement.style.setProperty("--footer-h", `${element.offsetHeight}px`);
       } else {
-        // Cada sección guarda su propio alto
         element.style.setProperty("--panel-h", `${element.offsetHeight}px`);
       }
     }
   });
 
-  for (const panel of panels) {
-    resizeObserver.observe(panel);
-  }
+  for (const panel of panels) resizeObserver.observe(panel);
   if (footer) resizeObserver.observe(footer);
 
   // ---------- 2. Que el foco nunca quede tapado ----------
-  // La misma condición que la media query del CSS
   const stacking = window.matchMedia(
     "(min-width: 1024px) and (min-height: 720px) and (prefers-reduced-motion: no-preference)",
   );
@@ -52,15 +48,10 @@ export function initStacking(): void {
     });
     if (!isCovered) return;
 
-    // Llevar la página a la posición real de esa sección (sumando las anteriores)
-    const main = panels[0].parentElement as HTMLElement;
-    let top = main.getBoundingClientRect().top + window.scrollY + main.offsetTop * 0;
-    top += parseFloat(getComputedStyle(main).paddingTop);
-    for (const p of panels) {
-      if (p === panel) break;
-      top += p.offsetHeight;
-    }
-    const offsetInPanel = rect.top - panel.getBoundingClientRect().top;
-    window.scrollTo({ top: top + offsetInPanel - 120 });
+    // Llevar la página a la posición real del elemento
+    window.scrollTo({
+      top: pagePosition(target) - headerHeight() - 24,
+      behavior: "instant",
+    });
   });
 }
