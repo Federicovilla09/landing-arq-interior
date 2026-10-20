@@ -1,0 +1,14 @@
+# Propuesta privada: los buscadores no indexan,
+# pero las vistas previas de los links sí pueden leer la página.
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: *
+Disallow: /
