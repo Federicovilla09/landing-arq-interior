@@ -1,376 +1,618 @@
 <!doctype html>
 <html lang="es-AR">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Valentina Ramirez · Arquitecta — Espacios pensados para tu día a día</title>
-  <meta name="description"
-    content="Diseño espacios a partir de cómo vivís y qué necesitás. Conocé cómo trabajo y consultá por tu proyecto." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Valentina Ramirez · Arquitecta — Espacios pensados para tu día a día
+    </title>
+    <meta
+      name="description"
+      content="Diseño espacios a partir de cómo vivís y qué necesitás. Conocé cómo trabajo y consultá por tu proyecto."
+    />
+    <!-- Propuesta privada: que los buscadores no la indexen.
+         Quitar esta línea si la página pasa a ser el sitio oficial. -->
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#F6F2EC" />
     <!-- Vista previa al compartir el link (Open Graph) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-    <meta property="og:url" content="https://landing-arq-interior.vercel.app/" />
+    <meta
+      property="og:url"
+      content="https://landing-arq-interior.vercel.app/"
+    />
     <meta property="og:title" content="Valentina Ramirez · Arquitecta" />
-    <meta property="og:description" content="Diseño espacios a partir de cómo vivís y qué necesitás." />
-    <meta property="og:image" content="https://landing-arq-interior.vercel.app/public/images/og-image.jpg" />
+    <meta
+      property="og:description"
+      content="Diseño espacios a partir de cómo vivís y qué necesitás."
+    />
+    <meta
+      property="og:image"
+      content="https://landing-arq-interior.vercel.app/og-image.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Tu casa debería hacerte la vida más fácil. Imagen ilustrativa de un living con biblioteca de madera." />
+    <meta
+      property="og:image:alt"
+      content="Tu casa debería hacerte la vida más fácil. Imagen ilustrativa de un living con biblioteca de madera."
+    />
     <meta name="twitter:card" content="summary_large_image" />
-</head>
+  </head>
 
-<body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="site-header">
-    <!-- Marca: vuelve al inicio -->
-    <a class="site-header__brand" href="#inicio"> DEMO · Arquitecta</a>
+    <header class="site-header">
+      <!-- Marca: vuelve al inicio -->
+      <a class="site-header__brand" href="#inicio"> DEMO · Arquitecta</a>
 
-    <!-- Anclas a las secciones -->
-    <nav class="site-header__nav" aria-label="Principal" data-nav>
-      <ul class="site-header__links">
-        <li><a class="nav-item" href="#servicios">Servicios</a></li>
-        <li><a class="nav-item" href="#proyectos">Proyectos</a></li>
-        <li><a class="nav-item" href="#sobre-mi">Sobre mí</a></li>
-        <li><a class="nav-item" href="#como-trabajo">Cómo trabajo</a></li>
-      </ul>
-    </nav>
+      <!-- Anclas a las secciones -->
+      <nav class="site-header__nav" aria-label="Principal" data-nav>
+        <ul class="site-header__links">
+          <li><a class="nav-item" href="#servicios">Servicios</a></li>
+          <li><a class="nav-item" href="#proyectos">Proyectos</a></li>
+          <li><a class="nav-item" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav-item" href="#como-trabajo">Cómo trabajo</a></li>
+        </ul>
+      </nav>
 
-    <!-- Acciones -->
-    <div class="site-header__actions">
-      <a class="button button--primary" href="#contacto" data-show-after-hero>
-        Consultar<span class="site-header__cta-long"> por mi espacio</span>
-      </a>
-
-      <button class="icon-button" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"
-        data-menu-open>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <main id="contenido">
-    <!-- 01 · Hero -->
-    <section id="inicio" class="section section--hero" aria-labelledby="inicio-titulo" data-panel>
-      <div class="hero__content">
-        <p class="overline">Arquitecta</p>
-        <h1 id="inicio-titulo">Tu casa debería hacerte la vida más fácil</h1>
-        <p class="lead">
-          Diseño espacios a partir de cómo vivís, qué necesitás y cómo querés sentirte en tu día a día.
-        </p>
-        <div class="section__actions">
-          <a class="button button--primary" href="#contacto" data-hero-cta>Consultar por mi espacio</a>
-          <a class="button button--secondary" href="#proyectos">Ver proyectos</a>
-        </div>
-      </div>
-
-      <figure class="hero__media">
-        <img src="public/images/hero-living.webp"
-          alt="Imagen ilustrativa: living con biblioteca de madera a medida y banco bajo la ventana" width="1280"
-          height="1655" fetchpriority="high" />
-        <figcaption class="media-label">Imagen ilustrativa</figcaption>
-      </figure>
-    </section>
-
-    <!-- 02 · Qué puedo resolver -->
-    <section id="servicios" class="section" aria-labelledby="servicios-titulo" data-panel>
-      <div class="section__header">
-        <p class="overline">01 · Qué puedo resolver</p>
-        <h2 id="servicios-titulo">¿Tu casa no funciona como necesitás?</h2>
-        <p class="lead">
-          Muchas veces el problema no es el estilo, sino cómo está pensado el espacio. Estas son algunas
-          situaciones en las que puedo ayudarte.
-        </p>
-      </div>
-
-      <ul class="need-list" role="list">
-        <li class="card-need">
-          <h3>Mi casa no acompaña mi rutina</h3>
-          <p>Reorganizo ambientes para que moverte, guardar y usar cada rincón sea más simple.</p>
-        </li>
-        <li class="card-need">
-          <h3>Necesito algo pensado para mi espacio</h3>
-          <p>Diseño soluciones y muebles a medida cuando lo estándar no encaja.</p>
-        </li>
-        <li class="card-need">
-          <h3>Quiero renovar y no sé por dónde empezar</h3>
-          <p>Te ayudo a ordenar ideas y evaluar opciones antes de invertir en cambios.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 03 · Proyectos -->
-    <section id="proyectos" class="section section--subtle" aria-labelledby="proyectos-titulo" data-panel="tall">
-      <div class="section__top">
-        <div class="section__header">
-          <p class="overline">02 · Proyectos</p>
-          <h2 id="proyectos-titulo">Cada proyecto parte de una necesidad</h2>
-          <p class="lead">Así se ve el diseño cuando empieza por cómo vive cada persona.</p>
-        </div>
-
-        <a class="link" href="https://www.instagram.com/usuario/" target="_blank" rel="noopener"
-          aria-label="Ver más proyectos en Instagram (se abre en una pestaña nueva)">
-          Ver más en Instagram
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 17L17 7M8 7h9v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+      <!-- Acciones -->
+      <div class="site-header__actions">
+        <a class="button button--primary" href="#contacto" data-show-after-hero>
+          Consultar<span class="site-header__cta-long"> por mi espacio</span>
         </a>
-      </div>
 
-      <ul class="project-grid" role="list">
-        <li>
-          <article class="card-project">
-            <figure class="card-project__media">
-              <img src="/images/proyecto-living-comedor.webp"
-                alt="Imagen ilustrativa: living comedor integrado con zonas para estar, comer y trabajar" width="1600"
-                height="1195" loading="lazy" />
-              <figcaption class="media-label">Imagen ilustrativa</figcaption>
-            </figure>
-            <h3>Living comedor integrado</h3>
-            <p>Un ambiente que no alcanzaba para todo → zonas claras para estar, comer y trabajar.</p>
-          </article>
-        </li>
-        <li>
-          <article class="card-project">
-            <figure class="card-project__media">
-              <img src="/images/proyecto-cocina.webp"
-                alt="Imagen ilustrativa: cocina chica con muebles de madera a medida" width="1000" height="1339"
-                loading="lazy" />
-              <figcaption class="media-label">Imagen ilustrativa</figcaption>
-            </figure>
-            <h3>Cocina para el día a día</h3>
-            <p>Poco lugar de guardado → muebles a medida que aprovechan cada centímetro.</p>
-          </article>
-        </li>
-        <li>
-          <article class="card-project">
-            <figure class="card-project__media">
-              <img src="/images/proyecto-dormitorio.webp" alt="Imagen ilustrativa: dormitorio con placard a medida"
-                width="1000" height="1339" loading="lazy" />
-              <figcaption class="media-label">Imagen ilustrativa</figcaption>
-            </figure>
-            <h3>Dormitorio con guardado</h3>
-            <p>Ropa y objetos sin lugar → un placard pensado para cómo se usa.</p>
-          </article>
-        </li>
-        <li>
-          <article class="card-project">
-            <figure class="card-project__media">
-              <img src="/images/proyecto-rincon-trabajo.webp"
-                alt="Imagen ilustrativa: escritorio a medida integrado al living" width="1600" height="1195"
-                loading="lazy" />
-              <figcaption class="media-label">Imagen ilustrativa</figcaption>
-            </figure>
-            <h3>Rincón de trabajo en casa</h3>
-            <p>Trabajar en la mesa del comedor → un espacio propio que se integra al living.</p>
-          </article>
-        </li>
-      </ul>
-
-      <div class="projects__cta">
-        <p class="projects__question">¿Tenés un espacio que no funciona como necesitás?</p>
-        <a class="button button--primary" href="#contacto">Consultar por mi espacio</a>
-      </div>
-    </section>
-
-    <!-- 04 · Sobre mí -->
-    <section id="sobre-mi" class="section section--about" aria-labelledby="sobre-mi-titulo" data-panel>
-      <figure class="about__media">
-        <img src="public/images/sobre-mi-retrato.webp"
-          alt="Imagen ilustrativa: retrato de una mujer con una taza de café" width="800" height="1200"
-          loading="lazy" />
-        <figcaption class="media-label">Imagen ilustrativa</figcaption>
-      </figure>
-
-      <div class="about__content">
-        <div class="section__header">
-          <p class="overline">03 · Sobre mí</p>
-          <h2 id="sobre-mi-titulo">Fan de resolver espacios</h2>
-        </div>
-        <p class="lead">
-          Soy arquitecta y me gusta crear y encontrar soluciones. Antes de recibirme ya diseñaba muebles a
-          medida, y de ahí viene mi forma de mirar cada espacio: entender cómo vive cada persona y qué
-          necesita realmente.
-        </p>
-        <p class="lead">
-          Creo que el diseño no es solo estética. Cómo se organiza una casa influye en el día a día, y una
-          buena decisión espacial puede hacer más simples los movimientos y las rutinas. Por eso cada
-          proyecto tiene detalle, intención y una idea clara.
-        </p>
-        <p class="about__signature">Valentina Ramirez</p>
-      </div>
-    </section>
-
-    <!-- 05 · Cómo trabajo -->
-    <section id="como-trabajo" class="section section--subtle section--process" aria-labelledby="como-trabajo-titulo"
-      data-panel>
-      <div class="section__header">
-        <p class="overline">04 · Cómo trabajo</p>
-        <h2 id="como-trabajo-titulo">Qué pasa cuando me escribís</h2>
-        <p class="lead">Primero nos conocemos y ves una propuesta. Si decidís avanzar, seguimos.</p>
-      </div>
-
-      <div class="process">
-        <!-- Etapa 1 -->
-        <div class="process__stage">
-          <div class="stage-label">
-            <h3>Antes de decidir</h3>
-            <p>Conocernos y ver una primera propuesta</p>
-          </div>
-          <ol class="process-list" role="list">
-            <li class="process-row process-row--highlighted">
-              <span class="process-row__number">01</span>
-              <h4 class="process-row__title">Conversación</h4>
-              <p class="process-row__text">Me contás cómo vivís, qué necesitás y qué ideas tenés.</p>
-            </li>
-            <li class="process-row">
-              <span class="process-row__number">02</span>
-              <h4 class="process-row__title">Propuesta inicial</h4>
-              <p class="process-row__text">Te presento una primera propuesta para tu espacio.</p>
-              <p class="process-row__receive"><span>Recibís</span>Propuesta inicial y presupuesto.</p>
-            </li>
-          </ol>
-        </div>
-
-        <!-- Etapa 2 -->
-        <div class="process__stage">
-          <div class="stage-label">
-            <h3>Si avanzamos</h3>
-            <p>Desarrollo del proyecto</p>
-          </div>
-          <ol class="process-list" role="list" start="3">
-            <li class="process-row">
-              <span class="process-row__number">03</span>
-              <h4 class="process-row__title">Relevamiento</h4>
-              <p class="process-row__text">Si decidís avanzar, relevo el espacio en detalle.</p>
-            </li>
-            <li class="process-row">
-              <span class="process-row__number">04</span>
-              <h4 class="process-row__title">Presentación y ajustes</h4>
-              <p class="process-row__text">Te muestro la propuesta en imágenes y la ajustamos juntos.</p>
-              <p class="process-row__receive"><span>Recibís</span>Presentación visual de la propuesta.</p>
-            </li>
-            <li class="process-row">
-              <span class="process-row__number">05</span>
-              <h4 class="process-row__title">Entrega</h4>
-              <p class="process-row__text">Cierro el proyecto según el alcance que definimos.</p>
-              <p class="process-row__receive"><span>Recibís</span>Materiales, detalles y presupuesto de ejecución.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 · Contacto -->
-    <section id="contacto" class="section section--contact" aria-labelledby="contacto-titulo" data-panel>
-      <div class="section__header">
-        <p class="overline">05 · Contacto</p>
-        <h2 id="contacto-titulo">¿Empezamos por tu espacio?</h2>
-        <p class="lead">
-          El primer paso es una conversación: contame qué necesitás y vemos cómo puedo ayudarte.
-        </p>
-      </div>
-
-      <div class="contact__action">
-        <a class="button button--inverse" href="https://ig.me/m/usuario" target="_blank" rel="noopener"
-          aria-describedby="contacto-aclaracion">
-          Escribime por Instagram
-          <span class="visually-hidden">(se abre en una pestaña nueva)</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 17L17 7M8 7h9v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="menu"
+          aria-expanded="false"
+          data-menu-open
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
           </svg>
-        </a>
-        <p id="contacto-aclaracion" class="contact__note">
-          Se abre Instagram para enviarme un mensaje directo.
-        </p>
+        </button>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="site-footer__blocks">
-      <!-- Identidad -->
-      <div class="site-footer__identity">
-        <p class="site-footer__brand">DEMO · Arquitecta</p>
-        <p>
-          El diseño no es solo estética: también es cómo un espacio te
-          facilita el día a día.
-        </p>
-      </div>
+    <main id="contenido">
+      <!-- 01 · Hero -->
+      <section
+        id="inicio"
+        class="section section--hero"
+        aria-labelledby="inicio-titulo"
+        data-panel
+      >
+        <div class="hero__content">
+          <p class="overline">Arquitecta</p>
+          <h1 id="inicio-titulo">Tu casa debería hacerte la vida más fácil</h1>
+          <p class="lead">
+            Diseño espacios a partir de cómo vivís, qué necesitás y cómo querés
+            sentirte en tu día a día.
+          </p>
+          <div class="section__actions">
+            <a class="button button--primary" href="#contacto" data-hero-cta
+              >Consultar por mi espacio</a
+            >
+            <a class="button button--secondary" href="#proyectos"
+              >Ver proyectos</a
+            >
+          </div>
+        </div>
 
-      <!-- Contacto -->
-      <address class="site-footer__contact">
-        <p class="overline">Contacto</p>
-        <ul>
-          <li>
-            <a class="contact-item" href="https://www.instagram.com/usuario/" target="_blank" rel="noopener"
-              aria-label="@[usuario] en Instagram (se abre en una pestaña nueva)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-              </svg>
-              @ValentinaRamirez_Arq
-            </a>
+        <figure class="hero__media">
+          <img
+            src="public/images/hero-living.webp"
+            alt="Imagen ilustrativa: living con biblioteca de madera a medida y banco bajo la ventana"
+            width="1280"
+            height="1655"
+            fetchpriority="high"
+          />
+          <figcaption class="media-label">Imagen ilustrativa</figcaption>
+        </figure>
+      </section>
+
+      <!-- 02 · Qué puedo resolver -->
+      <section
+        id="servicios"
+        class="section"
+        aria-labelledby="servicios-titulo"
+        data-panel
+      >
+        <div class="section__header">
+          <p class="overline">01 · Qué puedo resolver</p>
+          <h2 id="servicios-titulo">¿Tu casa no funciona como necesitás?</h2>
+          <p class="lead">
+            Muchas veces el problema no es el estilo, sino cómo está pensado el
+            espacio. Estas son algunas situaciones en las que puedo ayudarte.
+          </p>
+        </div>
+
+        <ul class="need-list" role="list">
+          <li class="card-need">
+            <h3>Mi casa no acompaña mi rutina</h3>
+            <p>
+              Reorganizo ambientes para que moverte, guardar y usar cada rincón
+              sea más simple.
+            </p>
           </li>
-          <li>
-            <a class="contact-item" href="mailto:correo@dominio.com">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M3.75 6h16.5v12H3.75zM4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5"
-                  stroke-linejoin="round" />
-              </svg>
-              ValentinaRamirez@example.com
-            </a>
+          <li class="card-need">
+            <h3>Necesito algo pensado para mi espacio</h3>
+            <p>
+              Diseño soluciones y muebles a medida cuando lo estándar no encaja.
+            </p>
+          </li>
+          <li class="card-need">
+            <h3>Quiero renovar y no sé por dónde empezar</h3>
+            <p>
+              Te ayudo a ordenar ideas y evaluar opciones antes de invertir en
+              cambios.
+            </p>
           </li>
         </ul>
-      </address>
-    </div>
+      </section>
 
-    <p class="site-footer__note">
-      Propuesta conceptual de sitio web · Imágenes ilustrativas
-    </p>
-  </footer>
+      <!-- 03 · Proyectos -->
+      <section
+        id="proyectos"
+        class="section section--subtle"
+        aria-labelledby="proyectos-titulo"
+        data-panel="tall"
+      >
+        <div class="section__top">
+          <div class="section__header">
+            <p class="overline">02 · Proyectos</p>
+            <h2 id="proyectos-titulo">Cada proyecto parte de una necesidad</h2>
+            <p class="lead">
+              Así se ve el diseño cuando empieza por cómo vive cada persona.
+            </p>
+          </div>
 
-  <!-- Volver arriba: aparece cuando el hero sale de la pantalla -->
-  <a class="back-to-top" href="#inicio" aria-label="Volver al inicio" data-show-after-hero>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </svg>
-  </a>
+          <a
+            class="link"
+            href="https://www.instagram.com/usuario/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Ver más proyectos en Instagram (se abre en una pestaña nueva)"
+          >
+            Ver más en Instagram
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M7 17L17 7M8 7h9v9"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
 
-  <!-- Menú mobile (menos de 1024 px) -->
-  <dialog id="menu" class="menu" aria-label="Menú">
-    <div class="menu__header">
-      <span class="menu__brand">DEMO · Arquitecta</span>
-      <button class="icon-button" type="button" aria-label="Cerrar menú" data-menu-close>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-      </button>
-    </div>
+        <ul class="project-grid" role="list">
+          <li>
+            <article class="card-project">
+              <figure class="card-project__media">
+                <img
+                  src="/images/proyecto-living-comedor.webp"
+                  alt="Imagen ilustrativa: living comedor integrado con zonas para estar, comer y trabajar"
+                  width="1600"
+                  height="1195"
+                  loading="lazy"
+                />
+                <figcaption class="media-label">Imagen ilustrativa</figcaption>
+              </figure>
+              <h3>Living comedor integrado</h3>
+              <p>
+                Un ambiente que no alcanzaba para todo → zonas claras para
+                estar, comer y trabajar.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-project">
+              <figure class="card-project__media">
+                <img
+                  src="/images/proyecto-cocina.webp"
+                  alt="Imagen ilustrativa: cocina chica con muebles de madera a medida"
+                  width="1000"
+                  height="1339"
+                  loading="lazy"
+                />
+                <figcaption class="media-label">Imagen ilustrativa</figcaption>
+              </figure>
+              <h3>Cocina para el día a día</h3>
+              <p>
+                Poco lugar de guardado → muebles a medida que aprovechan cada
+                centímetro.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-project">
+              <figure class="card-project__media">
+                <img
+                  src="/images/proyecto-dormitorio.webp"
+                  alt="Imagen ilustrativa: dormitorio con placard a medida"
+                  width="1000"
+                  height="1339"
+                  loading="lazy"
+                />
+                <figcaption class="media-label">Imagen ilustrativa</figcaption>
+              </figure>
+              <h3>Dormitorio con guardado</h3>
+              <p>
+                Ropa y objetos sin lugar → un placard pensado para cómo se usa.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card-project">
+              <figure class="card-project__media">
+                <img
+                  src="/images/proyecto-rincon-trabajo.webp"
+                  alt="Imagen ilustrativa: escritorio a medida integrado al living"
+                  width="1600"
+                  height="1195"
+                  loading="lazy"
+                />
+                <figcaption class="media-label">Imagen ilustrativa</figcaption>
+              </figure>
+              <h3>Rincón de trabajo en casa</h3>
+              <p>
+                Trabajar en la mesa del comedor → un espacio propio que se
+                integra al living.
+              </p>
+            </article>
+          </li>
+        </ul>
 
-    <nav aria-label="Menú">
-      <ul class="menu__links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#como-trabajo">Cómo trabajo</a></li>
-      </ul>
-    </nav>
+        <div class="projects__cta">
+          <p class="projects__question">
+            ¿Tenés un espacio que no funciona como necesitás?
+          </p>
+          <a class="button button--primary" href="#contacto"
+            >Consultar por mi espacio</a
+          >
+        </div>
+      </section>
 
-    <a class="button button--primary" href="#contacto">Consultar por mi espacio</a>
-  </dialog>
+      <!-- 04 · Sobre mí -->
+      <section
+        id="sobre-mi"
+        class="section section--about"
+        aria-labelledby="sobre-mi-titulo"
+        data-panel
+      >
+        <figure class="about__media">
+          <img
+            src="public/images/sobre-mi-retrato.webp"
+            alt="Imagen ilustrativa: retrato de una mujer con una taza de café"
+            width="800"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption class="media-label">Imagen ilustrativa</figcaption>
+        </figure>
 
-  <script type="module" src="/src/main.ts"></script>
-</body>
+        <div class="about__content">
+          <div class="section__header">
+            <p class="overline">03 · Sobre mí</p>
+            <h2 id="sobre-mi-titulo">Fan de resolver espacios</h2>
+          </div>
+          <p class="lead">
+            Soy arquitecta y me gusta crear y encontrar soluciones. Antes de
+            recibirme ya diseñaba muebles a medida, y de ahí viene mi forma de
+            mirar cada espacio: entender cómo vive cada persona y qué necesita
+            realmente.
+          </p>
+          <p class="lead">
+            Creo que el diseño no es solo estética. Cómo se organiza una casa
+            influye en el día a día, y una buena decisión espacial puede hacer
+            más simples los movimientos y las rutinas. Por eso cada proyecto
+            tiene detalle, intención y una idea clara.
+          </p>
+          <p class="about__signature">Valentina Ramirez</p>
+        </div>
+      </section>
 
+      <!-- 05 · Cómo trabajo -->
+      <section
+        id="como-trabajo"
+        class="section section--subtle section--process"
+        aria-labelledby="como-trabajo-titulo"
+        data-panel
+      >
+        <div class="section__header">
+          <p class="overline">04 · Cómo trabajo</p>
+          <h2 id="como-trabajo-titulo">Qué pasa cuando me escribís</h2>
+          <p class="lead">
+            Primero nos conocemos y ves una propuesta. Si decidís avanzar,
+            seguimos.
+          </p>
+        </div>
+
+        <div class="process">
+          <!-- Etapa 1 -->
+          <div class="process__stage">
+            <div class="stage-label">
+              <h3>Antes de decidir</h3>
+              <p>Conocernos y ver una primera propuesta</p>
+            </div>
+            <ol class="process-list" role="list">
+              <li class="process-row process-row--highlighted">
+                <span class="process-row__number">01</span>
+                <h4 class="process-row__title">Conversación</h4>
+                <p class="process-row__text">
+                  Me contás cómo vivís, qué necesitás y qué ideas tenés.
+                </p>
+              </li>
+              <li class="process-row">
+                <span class="process-row__number">02</span>
+                <h4 class="process-row__title">Propuesta inicial</h4>
+                <p class="process-row__text">
+                  Te presento una primera propuesta para tu espacio.
+                </p>
+                <p class="process-row__receive">
+                  <span>Recibís</span>Propuesta inicial y presupuesto.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Etapa 2 -->
+          <div class="process__stage">
+            <div class="stage-label">
+              <h3>Si avanzamos</h3>
+              <p>Desarrollo del proyecto</p>
+            </div>
+            <ol class="process-list" role="list" start="3">
+              <li class="process-row">
+                <span class="process-row__number">03</span>
+                <h4 class="process-row__title">Relevamiento</h4>
+                <p class="process-row__text">
+                  Si decidís avanzar, relevo el espacio en detalle.
+                </p>
+              </li>
+              <li class="process-row">
+                <span class="process-row__number">04</span>
+                <h4 class="process-row__title">Presentación y ajustes</h4>
+                <p class="process-row__text">
+                  Te muestro la propuesta en imágenes y la ajustamos juntos.
+                </p>
+                <p class="process-row__receive">
+                  <span>Recibís</span>Presentación visual de la propuesta.
+                </p>
+              </li>
+              <li class="process-row">
+                <span class="process-row__number">05</span>
+                <h4 class="process-row__title">Entrega</h4>
+                <p class="process-row__text">
+                  Cierro el proyecto según el alcance que definimos.
+                </p>
+                <p class="process-row__receive">
+                  <span>Recibís</span>Materiales, detalles y presupuesto de
+                  ejecución.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 · Contacto -->
+      <section
+        id="contacto"
+        class="section section--contact"
+        aria-labelledby="contacto-titulo"
+        data-panel
+      >
+        <div class="section__header">
+          <p class="overline">05 · Contacto</p>
+          <h2 id="contacto-titulo">¿Empezamos por tu espacio?</h2>
+          <p class="lead">
+            El primer paso es una conversación: contame qué necesitás y vemos
+            cómo puedo ayudarte.
+          </p>
+        </div>
+
+        <div class="contact__action">
+          <a
+            class="button button--inverse"
+            href="https://ig.me/m/usuario"
+            target="_blank"
+            rel="noopener"
+            aria-describedby="contacto-aclaracion"
+          >
+            Escribime por Instagram
+            <span class="visually-hidden">(se abre en una pestaña nueva)</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M7 17L17 7M8 7h9v9"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <p id="contacto-aclaracion" class="contact__note">
+            Se abre Instagram para enviarme un mensaje directo.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__blocks">
+        <!-- Identidad -->
+        <div class="site-footer__identity">
+          <p class="site-footer__brand">DEMO · Arquitecta</p>
+          <p>
+            El diseño no es solo estética: también es cómo un espacio te
+            facilita el día a día.
+          </p>
+        </div>
+
+        <!-- Contacto -->
+        <address class="site-footer__contact">
+          <p class="overline">Contacto</p>
+          <ul>
+            <li>
+              <a
+                class="contact-item"
+                href="https://www.instagram.com/usuario/"
+                target="_blank"
+                rel="noopener"
+                aria-label="@[usuario] en Instagram (se abre en una pestaña nueva)"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                </svg>
+                @ValentinaRamirez_Arq
+              </a>
+            </li>
+            <li>
+              <a class="contact-item" href="mailto:correo@dominio.com">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3.75 6h16.5v12H3.75zM4 7l8 6 8-6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                ValentinaRamirez@example.com
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <p class="site-footer__note">
+        Propuesta conceptual de sitio web · Imágenes ilustrativas
+      </p>
+    </footer>
+
+    <!-- Volver arriba: aparece cuando el hero sale de la pantalla -->
+    <a
+      class="back-to-top"
+      href="#inicio"
+      aria-label="Volver al inicio"
+      data-show-after-hero
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 19V5M6 11l6-6 6 6"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!-- Menú mobile (menos de 1024 px) -->
+    <dialog id="menu" class="menu" aria-label="Menú">
+      <div class="menu__header">
+        <span class="menu__brand">DEMO · Arquitecta</span>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Cerrar menú"
+          data-menu-close
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <nav aria-label="Menú">
+        <ul class="menu__links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#como-trabajo">Cómo trabajo</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button--primary" href="#contacto"
+        >Consultar por mi espacio</a
+      >
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
